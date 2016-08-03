@@ -3,16 +3,18 @@ var slideshow = {
 	currentPhotoIndex: 0,
 	nextPhoto: function () {
 		this.currentPhotoIndex++;
-		if (this.currentPhotoIndex >= this.photoList.length ){
+		if (this.currentPhotoIndex === this.photoList.length ){
 			console.log('end of slideshow');
+			this.currentPhotoIndex--;
 		} else {
 			this.getCurrentPhoto();
 		}
 	},
 	prevPhoto: function () {
 		this.currentPhotoIndex--;
-		if (this.currentPhotoIndex < 0) {
+		if (this.currentPhotoIndex === -1) {
 			console.log('start of slideshow');
+			this.currentPhotoIndex++;
 		} else {
 			this.getCurrentPhoto();
 		}
