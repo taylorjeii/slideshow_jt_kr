@@ -2,19 +2,19 @@ var slideshow = {
 	photoList: ['banana', 'pulsar', 'hamsting', 'hours', 'house'],
 	currentPhotoIndex: 0,
 	nextPhoto: function () {
-		if (this.currentPhotoIndex >= this.photoList.length - 1){
+		this.currentPhotoIndex++;
+		if (this.currentPhotoIndex >= this.photoList.length ){
 			console.log('end of slideshow');
 		} else {
 			this.getCurrentPhoto();
-			this.currentPhotoIndex++;
 		}
 	},
 	prevPhoto: function () {
+		this.currentPhotoIndex--;
 		if (this.currentPhotoIndex < 0) {
 			console.log('start of slideshow');
 		} else {
 			this.getCurrentPhoto();
-			this.currentPhotoIndex--;
 		}
 	},
 	getCurrentPhoto: function () {
@@ -41,4 +41,3 @@ slideshow.prevPhoto();
 
 slideshow.nextPhoto();
 slideshow.nextPhoto();
-
