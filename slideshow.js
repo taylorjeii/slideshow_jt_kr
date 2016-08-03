@@ -1,5 +1,5 @@
 var slideshow = {
-	photoList: ['banana', 'pulsar', 'hamsting', 'hours', 'house'],
+	photoList: ['first', 'second', 'third', 'fourth', 'fifth'],
 	currentPhotoIndex: 0,
 	nextPhoto: function () {
 		this.currentPhotoIndex++;
@@ -24,17 +24,14 @@ var slideshow = {
 	}
 }
 
-slideshow.nextPhoto();
-slideshow.nextPhoto();
+slideshow.getCurrentPhoto();
+
 slideshow.nextPhoto();
 slideshow.nextPhoto();
 slideshow.nextPhoto();
 slideshow.nextPhoto();
 slideshow.nextPhoto();
 
-
-slideshow.prevPhoto();
-slideshow.prevPhoto();
 slideshow.prevPhoto();
 slideshow.prevPhoto();
 slideshow.prevPhoto();
