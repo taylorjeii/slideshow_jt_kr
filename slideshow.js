@@ -2,11 +2,11 @@ var slideshow = {
 	photoList: ['banana', 'pulsar', 'hamsting', 'hours', 'house'],
 	currentPhotoIndex: 0,
 	nextPhoto: function () {
-		if (this.currentPhotoIndex >= this.photoList.length - 1){
+		if (this.currentPhotoIndex > this.photoList.length - 1){
 			console.log('end of slideshow');
 		} else {
 			this.getCurrentPhoto();
-			this.currentPhotoIndex++;
+			this.currentPhotoIndex += 1;
 		}
 	},
 	prevPhoto: function () {
@@ -14,15 +14,15 @@ var slideshow = {
 			console.log('start of slideshow');
 		} else {
 			this.getCurrentPhoto();
-			this.currentPhotoIndex--;
+			this.currentPhotoIndex -= 1;
 		}
 	},
 	getCurrentPhoto: function () {
-		console.log(this.photoList[this.currentPhotoIndex]);
+		console.log(this.photoList[this.currentPhotoIndex] + ': index: ' + this.currentPhotoIndex);
 	}
 }
 
-slideshow.nextPhoto();
+slideshow.nextPhoto(); 
 slideshow.nextPhoto();
 slideshow.nextPhoto();
 slideshow.nextPhoto();
