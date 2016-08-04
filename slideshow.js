@@ -1,7 +1,10 @@
 var slideshow = {
 	photoList: ['first', 'second', 'third', 'fourth', 'fifth'],
 	currentPhotoIndex: 0,
-	nextPhoto: function () {
+	getCurrentPhoto: function () {
+		console.log(this.photoList[this.currentPhotoIndex]);
+	},
+	play: function () {
 		this.currentPhotoIndex++;
 		if (this.currentPhotoIndex === this.photoList.length ){
 			console.log('end of slideshow');
@@ -10,33 +13,12 @@ var slideshow = {
 			this.getCurrentPhoto();
 		}
 	},
-	prevPhoto: function () {
-		this.currentPhotoIndex--;
-		if (this.currentPhotoIndex === -1) {
-			console.log('start of slideshow');
-			this.currentPhotoIndex++;
-		} else {
-			this.getCurrentPhoto();
-		}
-	},
-	getCurrentPhoto: function () {
-		console.log(this.photoList[this.currentPhotoIndex]);
-	}
+	playInterval: setInterval(this.play, 2000)
+	
+	pause: null
+
 }
 
-slideshow.getCurrentPhoto();
+slideshow.play();
 
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.nextPhoto();
 
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-
-slideshow.nextPhoto();
-slideshow.nextPhoto();
