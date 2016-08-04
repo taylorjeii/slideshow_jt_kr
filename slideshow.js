@@ -13,8 +13,7 @@ var slideshow = {
 			this.getCurrentPhoto();
 		}
 	},
-	playInterval: setInterval(this.play, 2000)
-	
+	playInterval: setInterval(this.play, 2000),
 	pause: null
 
 }
